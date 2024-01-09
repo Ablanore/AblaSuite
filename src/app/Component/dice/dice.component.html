@@ -1,0 +1,16 @@
+<div class="dice-container">
+    <div class="dice-header">
+        <mat-label>Le dé à {{ faces }} faces</mat-label>
+    </div>
+    <div class="dice-input">
+        <input matInput type="number" [value]="numberOfDice" readonly class="dice-number">
+        <div class="dice-buttons">
+            <button mat-icon-button (click)="increment()">
+            <mat-icon>add</mat-icon>
+            </button>
+            <button mat-icon-button (click)="decrement()">
+            <mat-icon>remove</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

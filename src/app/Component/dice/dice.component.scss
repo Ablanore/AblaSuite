@@ -1,0 +1,47 @@
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .dice-header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .dice-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dice-number {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: xx-large;
+  }
+  
+.dice-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dice-buttons button {
+    margin: 5px;
+    background-color: #dddddd;
+    border: solid 1px black;
+    cursor: pointer;
+  }
+  
+  .dice-buttons button:focus {
+    outline: none;
+  }
+  
+  .mat-icon {
+    font-size: 2em;
+  }

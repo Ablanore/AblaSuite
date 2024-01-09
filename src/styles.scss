@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.one-row {
+    display: flex;
+    justify-content: space-between; /* Pour répartir l'espace entre les éléments */
+}  

@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PremierComponent } from './Component/premier-component/premier-component.component';
-import { DeuxiemeComponent } from './Component/deuxieme-component/deuxieme-component.component';
+import { Dices } from './Component/dices/dices.component';
+import { Personnage } from './Component/Personnage/personnage.component';
+import { GestionProfileComponent } from './Component/gestion-profile/gestion-profile.component';
 
 const routes: Routes = [
-  { path: 'premier-component', component: PremierComponent },
-  { path: 'deuxieme-component', component: DeuxiemeComponent },
+  { path: 'dices', component: Dices },
+  { path: 'personnage', component: Personnage },
+  { path: 'gestion-profile', component: GestionProfileComponent },
   // Tu peux ajouter d'autres routes si nécessaire
 ];
 

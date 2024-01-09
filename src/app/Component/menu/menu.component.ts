@@ -25,8 +25,9 @@ export class MenuComponent {
   }
   menuItems: MenuItem[] = [
     { label: 'Accueil', link: '/' },
-    { label: 'Le composant 1', link: '/premier-component' },
-    { label: 'Le composant 2', link: '/deuxieme-component' }
+    { label: 'Lancer les dés', link: '/dices' },
+    { label: 'Personnage', link: '/personnage' },
+    { label: 'Votre profil', link: '/gestion-profile' }
     // Tu peux ajouter d'autres éléments du menu ici si nécessaire
   ];
   constructor(private breakpointObserver: BreakpointObserver) {}

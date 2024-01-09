@@ -1,0 +1,13 @@
+<div id="LigneDe" class="one-row">
+  <app-dice [faces]="4" (numberOfDiceChoose)="updateTotal($event,4)"></app-dice>
+  <app-dice [faces]="6" (numberOfDiceChoose)="updateTotal($event,6)"></app-dice>
+  <app-dice [faces]="8" (numberOfDiceChoose)="updateTotal($event,8)"></app-dice>
+  <app-dice [faces]="10" (numberOfDiceChoose)="updateTotal($event,10)"></app-dice>
+  <app-dice [faces]="12" (numberOfDiceChoose)="updateTotal($event,12)"></app-dice>
+  <app-dice [faces]="20" (numberOfDiceChoose)="updateTotal($event,20)"></app-dice>
+  <app-dice [faces]="0" (numberOfDiceChoose)="updateTotal($event,0)"></app-dice>
+</div>
+<div>  
+  <button (click)="rollDice()">Lancer les dés</button>  
+  <p>Résultat du jet : {{ total }}</p>
+</div>
