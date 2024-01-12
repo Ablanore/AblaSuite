@@ -1,64 +1,51 @@
 import { Component } from '@angular/core';
+import { Personnage, Caracteristique, Jetsauvegarde, Competence } from 'src/app/models/personnage.model';
+
 
 @Component({
   selector: 'app-personnage',
   templateUrl: './personnage.component.html',
   styleUrls: ['./personnage.component.scss']
 })
-export class Personnage {
-  // Dans le composant Personnage, créer un tableau d'objets Caracteristique
-  tableauDeCaracteristiques: iCaracteristique[] = [
-  { nomCarac: 'Force', valCarac: 7 },
-  { nomCarac: 'Dextérité', valCarac: 18 },
-  { nomCarac: 'Constitution', valCarac: 12 },
-  { nomCarac: 'Intelligence', valCarac: 17 },
-  { nomCarac: 'Sagesse', valCarac: 19 },
-  { nomCarac: 'Charisme', valCarac: 18 }
+export class PersonnageComponent {
+  monpersonnage : Personnage = new Personnage(tableauDeCaracteristiques, tableauDeJetSauvegarde, tableauDeCompetences);  
+}
+
+const tableauDeCaracteristiques = [
+  new Caracteristique('Force', 7),
+  new Caracteristique('Dextérité', 18),
+  new Caracteristique('Constitution', 12),
+  new Caracteristique('Intelligence', 17),
+  new Caracteristique('Sagesse', 19),
+  new Caracteristique('Charisme', 18)
+]
+
+const tableauDeJetSauvegarde = [
+  new Jetsauvegarde('Force', 4, true),
+  new Jetsauvegarde('Dextérité', 3, false),
+  new Jetsauvegarde('Constitution', 2, false),
+  new Jetsauvegarde('Intelligence', 7, true),
+  new Jetsauvegarde('Sagesse', 9, false),
+  new Jetsauvegarde('Charisme', 8, true)
 ];
-// Dans le composant Personnage, créer un tableau d'objets Jet de Sauvegarde
-tableauDeJetSauvegarde: iJetSauvegarde[] = [
-  { nomJS: 'Force', valJS: 4 },
-  { nomJS: 'Dextérité', valJS: 3 },
-  { nomJS: 'Constitution', valJS: 2 },
-  { nomJS: 'Intelligence', valJS: 7 },
-  { nomJS: 'Sagesse', valJS: 9 },
-  { nomJS: 'Charisme', valJS: 8 }
-];
-// Dans le composant Personnage, créer un tableau d'objets Compétences
-tableauDeCompetences: iCompetence[] = [
-  { nomComp: 'Acrobaties', nomCarac: 'Dex', valComp: 4 },
-  { nomComp: 'Dressage', nomCarac:'Sag', valComp: 4 },
-  { nomComp: 'Arcanes', nomCarac: 'Int', valComp: 4 },
-  { nomComp: 'Athlétisme', nomCarac: 'For', valComp: 4 },
-  { nomComp: 'Tromperie', nomCarac: 'Cha', valComp: 4 },
-  { nomComp: 'Histoire', nomCarac: 'Int', valComp: 4 },
-  { nomComp: 'Intimidation', nomCarac: 'Cha', valComp: 4 },
-  { nomComp: 'Intuition', nomCarac: 'Sag', valComp: 4 },
-  { nomComp: 'Investigation', nomCarac: 'Int', valComp: 4 },
-  { nomComp: 'Médecine', nomCarac: 'Sag', valComp: 4 },
-  { nomComp: 'Nature', nomCarac: 'Int', valComp: 4 },
-  { nomComp: 'Perception', nomCarac: 'Sag', valComp: 4 },
-  { nomComp: 'Persuasion', nomCarac: 'Cha', valComp: 4 },
-  { nomComp: 'Religion', nomCarac: 'Int', valComp: 4 },
-  { nomComp: 'Représentation', nomCarac: 'Cha', valComp: 4 },
-  { nomComp: 'Escamotage', nomCarac: 'Dex', valComp: 4 },
-  { nomComp: 'Discrétion', nomCarac: 'Dex', valComp: 4 },
-  { nomComp: 'Survie', nomCarac: 'Sag', valComp: 4 }
+
+const tableauDeCompetences = [
+  new Competence('Acrobaties', 'Dex', 4, true),
+  new Competence('Dressage', 'Sag', 2, false),
+  new Competence('Arcanes', 'Int', 8, true),
+  new Competence('Athlétisme', 'For', 5, true),
+  new Competence('Tromperie', 'Cha', 6, false),
+  new Competence('Histoire', 'Int', 4, true),
+  new Competence('Intimidation', 'Cha', 1, true),
+  new Competence('Intuition', 'Sag', 2, false),
+  new Competence('Investigation', 'Int', 4, false),
+  new Competence('Médecine', 'Sag', 3, true),
+  new Competence('Nature', 'Int', 4, true),
+  new Competence('Perception', 'Sag', 9, false),
+  new Competence('Persuasion', 'Cha', 6, true),
+  new Competence('Religion', 'Int', 4, false),
+  new Competence('Représentation', 'Cha', 5, true),
+  new Competence('Escamotage', 'Dex', 4, false),
+  new Competence('Discrétion', 'Dex', 1, false),
+  new Competence('Survie', 'Sag', 4, false)
   ];  
-}
-// Modèle d'objet pour les caractéristiques
-export interface iCaracteristique {
-  nomCarac: string;
-  valCarac: number;
-}
-// Modèle d'objet pour les jets de sauvegarde
-export interface iJetSauvegarde {
-  nomJS: string;
-  valJS: number;
-}
-// Modèle d'objet pour les compétences
-export interface iCompetence {
-  nomComp: string;
-  nomCarac: string;
-  valComp: number;
-}

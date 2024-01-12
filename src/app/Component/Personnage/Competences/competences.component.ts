@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Competence } from 'src/app/models/personnage.model';
 
 @Component({
   selector: 'app-competences',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./competences.component.scss']
 })
 export class CompetencesComponent {
-  @Input() TBcompetences: { nomComp: string, nomCarac: string, valComp: number }[] = [];
+  @Input() TBcompetences: Competence[] = [];
 }

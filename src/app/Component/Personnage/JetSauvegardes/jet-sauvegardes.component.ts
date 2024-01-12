@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Jetsauvegarde } from 'src/app/models/personnage.model';
 
 @Component({
   selector: 'app-jet-sauvegardes',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./jet-sauvegardes.component.scss']
 })
 export class JetSauvegardesComponent {
-  @Input() TBjetSauvegarde: { nomJS: string, valJS: number }[] = [];
+  @Input() TBjetSauvegarde: Jetsauvegarde[] = [];
 }

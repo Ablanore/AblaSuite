@@ -1,4 +1,8 @@
-<p>On va mettre plein de component pour faire ce bon dieu de personnage</p>
-<app-caracteristiques [TBcaracteristiques]="tableauDeCaracteristiques"></app-caracteristiques>
-<app-jet-sauvegardes [TBjetSauvegarde]="tableauDeJetSauvegarde"></app-jet-sauvegardes>
-<app-competences [TBcompetences]="tableauDeCompetences"></app-competences>
+<p>Feuille de personnage</p>
+<main id="boxes">
+    <div id="carac"><app-caracteristiques [TBcaracteristiques]="this.monpersonnage.caracteristiques"></app-caracteristiques></div>
+    <div id="sauvcompe">
+        <app-jet-sauvegardes [TBjetSauvegarde]="this.monpersonnage.jetSauvegardes"></app-jet-sauvegardes>
+        <app-competences [TBcompetences]="this.monpersonnage.competences"></app-competences>
+    </div>
+</main>

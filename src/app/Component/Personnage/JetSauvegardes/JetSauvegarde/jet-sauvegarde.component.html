@@ -1,4 +1,8 @@
 <div id="divJS" class="fondJS">
-    <mat-label class="nomComp">{{ nomJS}}</mat-label>    
-    <mat-label class="valComp">{{ valJS}}</mat-label>
+    <mat-radio-group>
+        <mat-radio-button [checked]="chk"></mat-radio-button>
+    </mat-radio-group>
+    <input type="radio" class="chkComp" [checked]="chk" />
+    <mat-label class="valComp">{{ valJS }}</mat-label>
+    <mat-label class="nomComp">{{ nomJS }}</mat-label>
 </div>
